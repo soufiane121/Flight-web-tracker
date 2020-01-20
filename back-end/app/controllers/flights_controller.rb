@@ -5,10 +5,10 @@ class FlightsController < ApplicationController
     #     render json: airports
     # end
 
-    def index
-        flights = Flight.search_by_airport(filtered_params)
-        render json: flights
-    end
+    # def index
+    #     flights = Flight.search_by_airport(filtered_params)
+    #     render json: flights
+    # end
 
     private
 
