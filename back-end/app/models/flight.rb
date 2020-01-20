@@ -7,8 +7,8 @@ require 'open-uri'
 class Flight < ApplicationRecord
     belongs_to :user
 
-    def self.search_by_airport(*arg_for_ariport_code)
-        url = "http://aviation-edge.com/v2/public/timetable?key=ae4475-a2c502&iataCode=JFK&type=arrival"
+    def self.search_by_airport(airportcode, dep_or_arri)
+        url = "http://aviation-edge.com/v2/public/timetable?key=ae4475-a2c502&iataCode=#{airportcode}&type=#{dep_or_arri}"
         respond = RestClient.get(url)
         full_hash = JSON.parse(respond)
         full_hash
@@ -26,9 +26,7 @@ class Flight < ApplicationRecord
     def self.scrap
         html = open("https://www.google.com/search?q=UA2326&rlz=1C1CHBF_enUS742US754&oq=UA2326&aqs=chrome..69i57j69i59j69i60.650j0j7&sourceid=chrome&ie=UTF-8")
         doc = Nokogiri::HTML.parse(html)
-        
         teext = doc.css("vk_h.fg9g5e")
-    
         puts teext
 
     end
