@@ -1087,3 +1087,54 @@ Completed 500 Internal Server Error in 375ms (ActiveRecord: 3.8ms | Allocations:
 NoMethodError (undefined method `errors' for nil:NilClass):
   
 app/controllers/flights_controller.rb:20:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 15:10:43 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>nil, "phone_number"=>"jhghg", "flight"=>{"user_id"=>1, "flight_data"=>nil}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (3.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 500 Internal Server Error in 52ms (Views: 15.3ms | ActiveRecord: 5.0ms | Allocations: 6946)
+
+
+Started POST "/flights" for ::1 at 2020-01-22 15:12:24 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"CX", "icaoCode"=>"CPA", "name"=>"Cathay Pacific"}, "arrival"=>{"actualRunway"=>"2020-01-22T07:42:00.000", "actualTime"=>"2020-01-22T07:48:00.000", "baggage"=>"9", "delay"=>nil, "estimatedRunway"=>"2020-01-22T07:42:00.000", "estimatedTime"=>"2020-01-22T07:48:00.000", "gate"=>"32F", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T08:00:00.000", "terminal"=>"8"}, "codeshared"=>{"airline"=>{"iataCode"=>"mq", "icaoCode"=>"eny", "name"=>"envoy air"}, "flight"=>{"iataNumber"=>"mq3985", "icaoNumber"=>"eny3985", "number"=>"3985"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:32:00.000", "actualTime"=>"2020-01-22T06:14:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:32:00.000", "estimatedTime"=>"2020-01-22T06:14:00.000", "gate"=>"C24", "iataCode"=>"RDU", "icaoCode"=>"KRDU", "scheduledTime"=>"2020-01-22T06:16:00.000", "terminal"=>"2"}, "flight"=>{"iataNumber"=>"CX7583", "icaoNumber"=>"CPA7583", "number"=>"7583"}, "status"=>"landed", "type"=>"arrival"}, "phone_number"=>"hh", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"CX", "icaoCode"=>"CPA", "name"=>"Cathay Pacific"}, "arrival"=>{"actualRunway"=>"2020-01-22T07:42:00.000", "actualTime"=>"2020-01-22T07:48:00.000", "baggage"=>"9", "delay"=>nil, "estimatedRunway"=>"2020-01-22T07:42:00.000", "estimatedTime"=>"2020-01-22T07:48:00.000", "gate"=>"32F", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T08:00:00.000", "terminal"=>"8"}, "codeshared"=>{"airline"=>{"iataCode"=>"mq", "icaoCode"=>"eny", "name"=>"envoy air"}, "flight"=>{"iataNumber"=>"mq3985", "icaoNumber"=>"eny3985", "number"=>"3985"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:32:00.000", "actualTime"=>"2020-01-22T06:14:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:32:00.000", "estimatedTime"=>"2020-01-22T06:14:00.000", "gate"=>"C24", "iataCode"=>"RDU", "icaoCode"=>"KRDU", "scheduledTime"=>"2020-01-22T06:16:00.000", "terminal"=>"2"}, "flight"=>{"iataNumber"=>"CX7583", "icaoNumber"=>"CPA7583", "number"=>"7583"}, "status"=>"landed", "type"=>"arrival"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (1.2ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 20:12:24.203542"], ["updated_at", "2020-01-22 20:12:24.203542"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 401ms (ActiveRecord: 3.6ms | Allocations: 5553)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:20:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 15:20:02 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"2011111111", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (0.8ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 20:20:03.010397"], ["updated_at", "2020-01-22 20:20:03.010397"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 2.1ms | Allocations: 5579)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:20:in `create'
