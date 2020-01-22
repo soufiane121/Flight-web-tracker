@@ -10,10 +10,17 @@ class FlightsController < ApplicationController
     #     render json: flights
     # end
 
+    def create 
+        flight = Flight.create(filtered_params)
+        if flight.save
+            message = "You are tracking'#{flight.flight.number}' from airport #{@flight.departureç} was just added."
+            TwilioTextMessenger.new(message).call
+        end
+    end 
     private
 
     def filtered_params
-        params.require(:flight).permit(airportcode, dep_or_arri)
+        params.require(:flight).permit(flight_data)
     end
 
 
