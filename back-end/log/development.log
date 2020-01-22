@@ -720,3 +720,370 @@ puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
 DEPRECATION WARNING: `Module#parent_name` has been renamed to `module_parent_name`. `parent_name` is deprecated and will be removed in Rails 6.1. (called from irb_binding at (irb):1)
+Started GET "/" for ::1 at 2020-01-22 13:26:08 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/soufianeoucherrou/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/soufianeoucherrou/.rvm/gems/ruby-2.6.1/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.0ms | Allocations: 316)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 1762)
+
+
+Started GET "/flights" for ::1 at 2020-01-22 13:26:15 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for FlightsController):
+  
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/flights" for ::1 at 2020-01-22 13:57:21 -0500
+  
+SyntaxError (/Users/soufianeoucherrou/Desktop/web-app/back-end/app/controllers/flights_controller.rb:19: syntax error, unexpected tLABEL
+...           render json: status: :created
+...                        ^~~~~~~):
+  
+app/controllers/flights_controller.rb:19: syntax error, unexpected tLABEL
+app/controllers/flights_controller.rb:19: syntax error, unexpected tLABEL
+Started POST "/flights" for ::1 at 2020-01-22 13:58:37 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfdfdfd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 14.1ms | Allocations: 73459)
+
+
+  
+NameError (undefined local variable or method `flight_data' for #<FlightsController:0x00007fc7dfcc3310>
+Did you mean?  flight_path
+               flights_path):
+  
+app/controllers/flights_controller.rb:29:in `filtered_params'
+app/controllers/flights_controller.rb:14:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:00:51 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 2.9ms | Allocations: 271)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: flights):
+  
+app/controllers/flights_controller.rb:29:in `filtered_params'
+app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Load (12.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/flights" for ::1 at 2020-01-22 14:10:54 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfdd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.0ms | Allocations: 73411)
+
+
+  
+NameError (undefined local variable or method `flight_data' for #<FlightsController:0x00007fc7e2196cc8>
+Did you mean?  flight_path
+               flights_path):
+  
+app/controllers/flights_controller.rb:29:in `filtered_params'
+app/controllers/flights_controller.rb:14:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:14:33 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfdd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 6.5ms | Allocations: 73412)
+
+
+  
+NameError (undefined local variable or method `flight_data' for #<FlightsController:0x00007fc7dfa04458>
+Did you mean?  flight_path
+               flights_path):
+  
+app/controllers/flights_controller.rb:29:in `filtered_params'
+app/controllers/flights_controller.rb:14:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:14:38 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfdd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 0.0ms | Allocations: 73393)
+
+
+  
+NameError (undefined local variable or method `flight_data' for #<FlightsController:0x00007fc7e5f19e88>
+Did you mean?  flight_path
+               flights_path):
+  
+app/controllers/flights_controller.rb:29:in `filtered_params'
+app/controllers/flights_controller.rb:14:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:15:45 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfdd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 0.0ms | Allocations: 73390)
+
+
+  
+NameError (undefined local variable or method `flight_data' for #<FlightsController:0x00007fc7dfceb5e0>
+Did you mean?  flight_path
+               flights_path):
+  
+app/controllers/flights_controller.rb:29:in `filtered_params'
+app/controllers/flights_controller.rb:14:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:16:32 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfdd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 500 Internal Server Error in 65ms (Views: 3.6ms | ActiveRecord: 23.4ms | Allocations: 11142)
+
+
+Started POST "/flights" for ::1 at 2020-01-22 14:18:56 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfdd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 500 Internal Server Error in 11ms (Views: 0.5ms | ActiveRecord: 6.7ms | Allocations: 5441)
+
+
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (8.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = $1 LIMIT $2[0m  [["user_name", "Test"], ["LIMIT", 1]]
+  [1m[36mUser Create (22.0ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Test"], ["first_name", "lol"], ["last_name", "loool"], ["password_digest", "1234"], ["created_at", "2020-01-22 19:24:49.902121"], ["updated_at", "2020-01-22 19:24:49.902121"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/flights" for ::1 at 2020-01-22 14:25:18 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"dfdd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"TP", "icaoCode"=>"TAP", "name"=>"TAP Air Portugal"}, "arrival"=>{"actualRunway"=>"2020-01-22T08:31:00.000", "actualTime"=>"2020-01-22T08:36:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:31:00.000", "estimatedTime"=>"2020-01-22T08:36:00.000", "gate"=>nil, "iataCode"=>"MSY", "icaoCode"=>"KMSY", "scheduledTime"=>"2020-01-22T09:17:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6675", "icaoNumber"=>"jbu675", "number"=>"675"}}, "departure"=>{"actualRunway"=>"2020-01-22T06:52:00.000", "actualTime"=>"2020-01-22T06:37:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T06:52:00.000", "estimatedTime"=>"2020-01-22T06:37:00.000", "gate"=>"14", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T06:43:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"TP4343", "icaoNumber"=>"TAP4343", "number"=>"4343"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 500 Internal Server Error in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1419)
+
+
+Started POST "/flights" for ::1 at 2020-01-22 14:25:44 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"jdjdjdjdjd", "flight"=>{"flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 500 Internal Server Error in 5ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1351)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/flights" for ::1 at 2020-01-22 14:27:11 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}, "user_id"=>1, "phone_number"=>"fdfdfdfd", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameters: :user_id, :flight_data[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.49ms)
+Completed 500 Internal Server Error in 15ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1354)
+
+
+Started POST "/flights" for ::1 at 2020-01-22 14:28:24 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"sfddfdfdd", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (3.9ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:28:24.238770"], ["updated_at", "2020-01-22 19:28:24.238770"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 23.5ms | Allocations: 15941)
+
+
+  
+NoMethodError (undefined method `flight' for #<Flight:0x00007fc7dfb6dd30>
+Did you mean?  flight_data):
+  
+app/controllers/flights_controller.rb:17:in `create'
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/flights" for ::1 at 2020-01-22 14:31:18 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"sfddfdfdd", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (0.5ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:31:18.269440"], ["updated_at", "2020-01-22 19:31:18.269440"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 14.1ms | Allocations: 14331)
+
+
+  
+NoMethodError (undefined method `flight' for #<Flight:0x00007fc7e21860a8>
+Did you mean?  flight_data):
+  
+app/controllers/flights_controller.rb:17:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:32:01 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"sfddfdfdd", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (0.4ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:32:01.346241"], ["updated_at", "2020-01-22 19:32:01.346241"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 11.0ms | Allocations: 14034)
+
+
+  
+NameError (uninitialized constant FlightsController::TwilioTextMessenger):
+  
+app/controllers/flights_controller.rb:19:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:34:03 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"sfddfdfdd", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (0.4ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:34:03.290027"], ["updated_at", "2020-01-22 19:34:03.290027"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.4ms | Allocations: 5171)
+
+
+  
+NameError (uninitialized constant FlightsController::TwilioTextMessenger):
+  
+app/controllers/flights_controller.rb:19:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:34:25 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"sfddfdfdd", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (0.8ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:34:25.234666"], ["updated_at", "2020-01-22 19:34:25.234666"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 14.8ms | Allocations: 15783)
+
+
+  
+NoMethodError (undefined method `message' for #<Twilio::REST::Client:0x00007fb9a02029f0>
+Did you mean?  messages):
+  
+app/services/twilio_text_messenger.rb:10:in `call'
+app/controllers/flights_controller.rb:19:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 14:34:51 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"sfddfdfdd", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (0.7ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:34:51.260845"], ["updated_at", "2020-01-22 19:34:51.260845"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 204 No Content in 379ms (ActiveRecord: 15.1ms | Allocations: 17161)
+
+
+Started POST "/flights" for ::1 at 2020-01-22 14:41:55 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"jhjhg", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"LY", "icaoCode"=>"ELY", "name"=>"El Al"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>{"airline"=>{"iataCode"=>"b6", "icaoCode"=>"jbu", "name"=>"jetblue airways"}, "flight"=>{"iataNumber"=>"b6213", "icaoNumber"=>"jbu213", "number"=>"213"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"LY8672", "icaoNumber"=>"ELY8672", "number"=>"8672"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (1.0ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:41:55.885027"], ["updated_at", "2020-01-22 19:41:55.885027"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 204 No Content in 346ms (ActiveRecord: 4.0ms | Allocations: 5194)
+
+
+Started POST "/flights" for ::1 at 2020-01-22 14:46:23 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"jghgjhgjh", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (0.5ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:46:24.045038"], ["updated_at", "2020-01-22 19:46:24.045038"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (14.03ms)
+Completed 200 OK in 368ms (Views: 95.0ms | ActiveRecord: 23.5ms | Allocations: 18275)
+
+
+Started POST "/flights" for ::1 at 2020-01-22 14:49:12 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"d", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (0.4ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:49:12.475020"], ["updated_at", "2020-01-22 19:49:12.475020"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (3.55ms)
+Completed 200 OK in 263ms (Views: 4.4ms | ActiveRecord: 1.8ms | Allocations: 5374)
+
+
+Started POST "/flights" for ::1 at 2020-01-22 14:56:29 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"6463850995", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"B6", "icaoCode"=>"JBU", "name"=>"JetBlue Airways"}, "arrival"=>{"actualRunway"=>"2020-01-22T10:24:00.000", "actualTime"=>"2020-01-22T10:28:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T10:24:00.000", "estimatedTime"=>"2020-01-22T10:28:00.000", "gate"=>"7", "iataCode"=>"LGB", "icaoCode"=>"KLGB", "scheduledTime"=>"2020-01-22T10:53:00.000", "terminal"=>nil}, "codeshared"=>nil, "departure"=>{"actualRunway"=>"2020-01-22T08:01:00.000", "actualTime"=>"2020-01-22T07:23:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:01:00.000", "estimatedTime"=>"2020-01-22T07:23:00.000", "gate"=>"3", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T07:25:00.000", "terminal"=>"5"}, "flight"=>{"iataNumber"=>"B6213", "icaoNumber"=>"JBU213", "number"=>"213"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[36mFlight Create (2.1ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 19:56:29.341082"], ["updated_at", "2020-01-22 19:56:29.341082"]]
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 3.8ms | Allocations: 14209)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:20:in `create'
