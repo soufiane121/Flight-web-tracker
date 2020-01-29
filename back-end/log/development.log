@@ -1138,6 +1138,7 @@ Completed 500 Internal Server Error in 240ms (ActiveRecord: 2.1ms | Allocations:
 NoMethodError (undefined method `errors' for nil:NilClass):
   
 app/controllers/flights_controller.rb:20:in `create'
+<<<<<<< HEAD
 Started POST "/flights" for ::1 at 2020-01-23 09:35:01 -0500
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by FlightsController#create as JSON
@@ -1679,6 +1680,14 @@ actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+=======
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:30 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+>>>>>>> master
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
 railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -1701,9 +1710,15 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/favicon.ico" for ::1 at 2020-01-27 20:38:30 -0500
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+=======
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+>>>>>>> master
   
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
@@ -1728,6 +1743,7 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/flights" for ::1 at 2020-01-27 20:39:00 -0500
 Processing by FlightsController#index as HTML
 Completed 204 No Content in 9ms (ActiveRecord: 0.0ms | Allocations: 2097)
@@ -2035,6 +2051,12 @@ actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+=======
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
 railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
 railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
@@ -2057,6 +2079,170 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+>>>>>>> master
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users" for ::1 at 2020-01-28 14:42:07 -0500
   [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by UsersController#index as HTML
@@ -3454,11 +3640,127 @@ Processing by FlightsController#create as JSON
   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
   ↳ app/controllers/flights_controller.rb:12:in `create'
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 4.1ms | Allocations: 5525)
+=======
+Started GET "/static/js/0.chunk.js" for ::1 at 2020-01-22 16:12:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/0.chunk.js"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/08af8bb4b3b656dc46d0.hot-update.json" for ::1 at 2020-01-22 16:13:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/08af8bb4b3b656dc46d0.hot-update.json"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/details" for ::1 at 2020-01-22 16:13:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/details"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.0) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/flights" for ::1 at 2020-01-22 16:14:25 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"CZ", "icaoCode"=>"CSN", "name"=>"China Southern Airlines"}, "arrival"=>{"actualRunway"=>"2020-01-22T11:02:00.000", "actualTime"=>"2020-01-22T11:10:00.000", "baggage"=>"30", "delay"=>"5", "estimatedRunway"=>"2020-01-22T11:02:00.000", "estimatedTime"=>"2020-01-22T11:10:00.000", "gate"=>"78", "iataCode"=>"MCO", "icaoCode"=>"KMCO", "scheduledTime"=>"2020-01-22T11:05:00.000", "terminal"=>"B"}, "codeshared"=>{"airline"=>{"iataCode"=>"dl", "icaoCode"=>"dal", "name"=>"delta air lines"}, "flight"=>{"iataNumber"=>"dl2822", "icaoNumber"=>"dal2822", "number"=>"2822"}}, "departure"=>{"actualRunway"=>"2020-01-22T09:00:00.000", "actualTime"=>"2020-01-22T08:02:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T09:00:00.000", "estimatedTime"=>"2020-01-22T08:02:00.000", "gate"=>"C66", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T08:05:00.000", "terminal"=>"2"}, "flight"=>{"iataNumber"=>"CZ1137", "icaoNumber"=>"CSN1137", "number"=>"1137"}, "status"=>"landed", "type"=>"departure"}, "phone_number"=>"ddd", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"CZ", "icaoCode"=>"CSN", "name"=>"China Southern Airlines"}, "arrival"=>{"actualRunway"=>"2020-01-22T11:02:00.000", "actualTime"=>"2020-01-22T11:10:00.000", "baggage"=>"30", "delay"=>"5", "estimatedRunway"=>"2020-01-22T11:02:00.000", "estimatedTime"=>"2020-01-22T11:10:00.000", "gate"=>"78", "iataCode"=>"MCO", "icaoCode"=>"KMCO", "scheduledTime"=>"2020-01-22T11:05:00.000", "terminal"=>"B"}, "codeshared"=>{"airline"=>{"iataCode"=>"dl", "icaoCode"=>"dal", "name"=>"delta air lines"}, "flight"=>{"iataNumber"=>"dl2822", "icaoNumber"=>"dal2822", "number"=>"2822"}}, "departure"=>{"actualRunway"=>"2020-01-22T09:00:00.000", "actualTime"=>"2020-01-22T08:02:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T09:00:00.000", "estimatedTime"=>"2020-01-22T08:02:00.000", "gate"=>"C66", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T08:05:00.000", "terminal"=>"2"}, "flight"=>{"iataNumber"=>"CZ1137", "icaoNumber"=>"CSN1137", "number"=>"1137"}, "status"=>"landed", "type"=>"departure"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:5:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:5:in `create'
+  [1m[36mFlight Create (2.0ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 21:14:25.538118"], ["updated_at", "2020-01-22 21:14:25.538118"]]
+  ↳ app/controllers/flights_controller.rb:5:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 1357ms (ActiveRecord: 17.3ms | Allocations: 17643)
 
 
   
 NoMethodError (undefined method `errors' for nil:NilClass):
   
+app/controllers/flights_controller.rb:11:in `create'
+Started POST "/flights" for ::1 at 2020-01-22 17:25:47 -0500
+Processing by FlightsController#create as JSON
+  Parameters: {"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"G3", "icaoCode"=>"GLO", "name"=>"Gol"}, "arrival"=>{"actualRunway"=>"2020-01-22T09:26:00.000", "actualTime"=>"2020-01-22T09:33:00.000", "baggage"=>"T4", "delay"=>nil, "estimatedRunway"=>"2020-01-22T09:26:00.000", "estimatedTime"=>"2020-01-22T09:33:00.000", "gate"=>"B32", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T10:10:00.000", "terminal"=>"4"}, "codeshared"=>{"airline"=>{"iataCode"=>"dl", "icaoCode"=>"dal", "name"=>"delta air lines"}, "flight"=>{"iataNumber"=>"dl1128", "icaoNumber"=>"dal1128", "number"=>"1128"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:13:00.000", "actualTime"=>"2020-01-22T08:00:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:13:00.000", "estimatedTime"=>"2020-01-22T08:00:00.000", "gate"=>"A7", "iataCode"=>"DTW", "icaoCode"=>"KDTW", "scheduledTime"=>"2020-01-22T08:05:00.000", "terminal"=>"M"}, "flight"=>{"iataNumber"=>"G38182", "icaoNumber"=>"GLO8182", "number"=>"8182"}, "status"=>"landed", "type"=>"arrival"}, "phone_number"=>"6463350995", "flight"=>{"user_id"=>1, "flight_data"=>{"airline"=>{"iataCode"=>"G3", "icaoCode"=>"GLO", "name"=>"Gol"}, "arrival"=>{"actualRunway"=>"2020-01-22T09:26:00.000", "actualTime"=>"2020-01-22T09:33:00.000", "baggage"=>"T4", "delay"=>nil, "estimatedRunway"=>"2020-01-22T09:26:00.000", "estimatedTime"=>"2020-01-22T09:33:00.000", "gate"=>"B32", "iataCode"=>"JFK", "icaoCode"=>"KJFK", "scheduledTime"=>"2020-01-22T10:10:00.000", "terminal"=>"4"}, "codeshared"=>{"airline"=>{"iataCode"=>"dl", "icaoCode"=>"dal", "name"=>"delta air lines"}, "flight"=>{"iataNumber"=>"dl1128", "icaoNumber"=>"dal1128", "number"=>"1128"}}, "departure"=>{"actualRunway"=>"2020-01-22T08:13:00.000", "actualTime"=>"2020-01-22T08:00:00.000", "baggage"=>nil, "delay"=>nil, "estimatedRunway"=>"2020-01-22T08:13:00.000", "estimatedTime"=>"2020-01-22T08:00:00.000", "gate"=>"A7", "iataCode"=>"DTW", "icaoCode"=>"KDTW", "scheduledTime"=>"2020-01-22T08:05:00.000", "terminal"=>"M"}, "flight"=>{"iataNumber"=>"G38182", "icaoNumber"=>"GLO8182", "number"=>"8182"}, "status"=>"landed", "type"=>"arrival"}}}
+[31mUnpermitted parameter: :flight_data[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/flights_controller.rb:5:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:5:in `create'
+  [1m[36mFlight Create (0.9ms)[0m  [1m[32mINSERT INTO "flights" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2020-01-22 22:25:47.907258"], ["updated_at", "2020-01-22 22:25:47.907258"]]
+  ↳ app/controllers/flights_controller.rb:5:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/flights_controller.rb:5:in `create'
+Completed 500 Internal Server Error in 365ms (ActiveRecord: 3.3ms | Allocations: 5663)
+>>>>>>> master
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+<<<<<<< HEAD
 app/controllers/flights_controller.rb:19:in `create'
 Started GET "/users/1" for ::1 at 2020-01-28 15:47:15 -0500
 Processing by UsersController#show as */*
@@ -10944,3 +11246,21 @@ Processing by FlightsController#update as JSON
 Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 1.2ms | Allocations: 4858)
 
 
+=======
+app/controllers/flights_controller.rb:11:in `create'
+>>>>>>> master
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8233726241105215725)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8233726241105215725)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8233726241105215725)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8233726241105215725)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8233726241105215725)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8233726241105215725)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
