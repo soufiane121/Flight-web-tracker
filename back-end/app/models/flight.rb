@@ -2,11 +2,15 @@ require 'byebug'
 require 'rest-client'
 require 'nokogiri'
 require 'open-uri'
-
-
 class Flight < ApplicationRecord
     belongs_to :user
-    validates :flight_data, presence: true
+    validates :airline, presence: true
+    validates :arrival, presence: true
+    validates :departure, presence: true
+    validates :flightt, presence: true
+    validates :status, presence: true
+    # validates :typpe, presence: true
+    
 
     # def self.search_by_airport(airportcode, dep_or_arri)
     #     url = "http://aviation-edge.com/v2/public/timetable?key=ae4475-a2c502&iataCode=#{airportcode}&type=#{dep_or_arri}"

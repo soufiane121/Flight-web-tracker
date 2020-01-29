@@ -1,5 +1,5 @@
 class FlightSerializer < ActiveModel::Serializer
-  attributes :flight_data
+  attributes :id, :airline, :arrival, :departure, :flightt, :status
   belongs_to :user
 
 end
