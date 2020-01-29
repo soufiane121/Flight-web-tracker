@@ -17,9 +17,14 @@ ActiveRecord::Schema.define(version: 2020_01_08_160613) do
 
   create_table "flights", force: :cascade do |t|
     t.integer "user_id"
-    t.jsonb "flight_data", default: "{}"
+    t.jsonb "airline", default: "{}"
+    t.jsonb "arrival", default: "{}"
+    t.jsonb "departure", default: "{}"
+    t.jsonb "flightt", default: "{}"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
+    t.string "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
   end
 
   create_table "users", force: :cascade do |t|
