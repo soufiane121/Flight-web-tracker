@@ -24,7 +24,7 @@ class FlightNum extends React.Component {
         "Accept": "application/json"
       },
       body: JSON.stringify({
-        user_id: 1,
+        user_id: parseInt(localStorage.user_id),
         airline: this.props.oneFlight.airline,
         arrival: this.props.oneFlight.arrival,
         departure: this.props.oneFlight.departure,

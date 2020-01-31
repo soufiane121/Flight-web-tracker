@@ -44,6 +44,12 @@ class FlightsController < ApplicationController
         end
     end 
 
+    def destroy
+        @flight = Flight.find_by_id(params[:id])
+        @flight.destroy
+        render json: Flight.all
+    end
+
     private
 
     def filtered_params

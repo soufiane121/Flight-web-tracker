@@ -22,6 +22,7 @@ class SearchPage extends React.Component {
         currentFlight: {},
         phoneNumberFromSearch: null,
         lastElementId: null,
+        deleteflightId: null
     }
 
     handleAirPortNumberSubmite = (code, arg2, arg3 )=>{
@@ -86,7 +87,7 @@ class SearchPage extends React.Component {
         const inter = setInterval(() => {
         fetch(`http://aviation-edge.com/v2/public/timetable?key=d3c2ac-8b1b5c&flight_iata=${this.state.flightNum}`)
         .then(resp => resp.json())
-        .then(data => {  console.log(data[0]);
+        .then(data => { console.log("after update", data);
             if (data[0].status !== this.state.currentFlight.status && data[0].status !== "landed" ) {
                 console.log("heeeeeyyyy");
                 // this.fetchAndSend(data)
@@ -95,12 +96,25 @@ class SearchPage extends React.Component {
                 console.log("YEEEEEES ITS WORKING PERFECLTY");
                 this.fetchAndSend(data)
                 clearInterval(inter)
+                // this.handleDeeletingFlight()
             }})
-       
+            .catch(function(errors) {
+                alert("We did not find this flight num in API, sorry")
+                console.log(errors);
+            })
         }, 9000);
         // clearInterval(inter)
         // clearInterval(inter)
+    }
 
+    handleDeeletingFlight=()=> {
+    //    this.state.deleteflightId && 
+       fetch(`http://localhost:3000/flights/${this.state.deleteflightId}`,{
+           method: 'DELETE'
+       })
+       .them(resp=> resp.json())
+       .then(data=> console.log("after delleting", data)
+       )
     }
 
     fetchAndSend=(data)=>{
@@ -114,7 +128,11 @@ class SearchPage extends React.Component {
                 status: data[0].status
             })})
         .then(resp => resp.json())
-        .then(data=> console.log("responds after update ", data))
+        .then(data=> this.setState({deleteflightId: data.id}))
+        // .then(dataa=>  console.log("responds after update jshdkjshdkjshdkj", dataa.id), function(dataa) {
+        //     this.setState({deleteflightId: dataa.id})
+        // })
+
         .catch(function(error) {
             alert("WE did not find this flight Number, Sorry");
             console.log(error.message);
@@ -126,6 +144,8 @@ class SearchPage extends React.Component {
     }
 
     render(){
+        console.log(this.state.deleteflightId);
+        
     return (
         <div>
         <Switch>
