@@ -8,10 +8,12 @@
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
     "compass-mixins": "^0.12.10",
+    "mdbreact": "^4.25.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-notifications": "^1.4.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0"
   },

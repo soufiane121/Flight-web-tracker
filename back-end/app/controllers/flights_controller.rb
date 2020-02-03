@@ -37,12 +37,24 @@ class FlightsController < ApplicationController
         if @flight.valid?
             message = "You are tracking '#{@flight.flightt['iataNumber']}' from airport #{@flight.departure["iataCode"]} was just added.We will keep you posted on any further update"
             # message = "Welcome, you fligh added successfully, We will keep you posted on any further update"
-            TwilioTextMessenger.new(message).call
+            # TwilioTextMessenger.new(message).call
             render json: { flight: UserSerializer.new(@flight) }, status: :created
         else
             render json: {error: @flight.errors.full_messages} , status: :not_created
         end
     end 
+
+    def destroy
+        # byebug
+        @flight = Flight.find_by_id(params[:id])
+        # byebug
+        if @flight.destroy
+             render json: head(:deleted)
+        else
+            render json: head(:undone)
+        end
+        
+    end
 
     private
 
