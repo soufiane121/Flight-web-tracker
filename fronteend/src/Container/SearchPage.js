@@ -80,7 +80,7 @@ class SearchPage extends React.Component {
         fetch(`http://localhost:3000/users/${userId}`)
         .then(resp => resp.json())
         .then(data => {
-            console.log("users flights after fetch", data.flights)
+            // console.log("users flights after fetch", data.flights)
             // byebug
             if (data.flights.length > 0) {  
             this.setState({
@@ -117,7 +117,7 @@ class SearchPage extends React.Component {
                 alert("We did not find this flight num in API, sorry")
                 console.log(errors);
             })
-        }, 9000);
+        }, 900000);
         // clearInterval(inter)
 
     }
@@ -169,7 +169,6 @@ class SearchPage extends React.Component {
     }
 
     render(){
-        console.log("after render ", this.state.currentFlight.id);
         
     return (
         <div>
